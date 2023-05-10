@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function Dropdown({ options }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,8 +7,18 @@ function Dropdown({ options }) {
     setIsOpen(!isOpen);
   };
 
+  const handleOptionClick = (option) => {
+    // CLOSE DROPDOWN
+    setIsOpen(false);
+    // TRACK SELECTION
+  };
+
   const renderedOptions = options.map((option) => {
-    return <div key={option.value}>{option.label}</div>;
+    return (
+      <div onClick={() => handleOptionClick(option)} key={option.value}>
+        {option.label}
+      </div>
+    );
   });
 
   return (

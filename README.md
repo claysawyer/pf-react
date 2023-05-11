@@ -2,6 +2,8 @@
 
 ## a simple react showcase using Tailwind
 
+## Components and technologies used
+
 <details>
   <summary>Dropdown</summary>
 

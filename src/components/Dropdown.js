@@ -10,6 +10,9 @@ function Dropdown({ options, value, onChange }) {
   // Handle outside click event
   useEffect(() => {
     const handler = (event) => {
+      if (!divEl.current) {
+        return;
+      }
       // Outside of current div element
       if (!divEl.current.contains(event.target)) {
         setIsOpen(false);

@@ -3,7 +3,7 @@
 ## Components and technologies used -
 
 <details>
-  <summary>Dropdown: by incorporating these React hooks, technologies, and concepts, the component achieves dynamic behavior, manages state, adds event listeners, handles outside click events, and styles the dropdown using Tailwind CSS classes.</summary>
+  <summary>Dropdown component: by incorporating these React hooks, technologies, and concepts, the component achieves dynamic behavior, manages state, adds event listeners, handles outside click events, and styles the dropdown using Tailwind CSS classes.</summary>
 
 1. **React Hooks**:
    - `useState`: Used to manage state within the functional component (`isOpen`).

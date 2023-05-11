@@ -1,10 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GoChevronDown } from "react-icons/go";
 import Panel from "./Panel";
 
 function Dropdown({ options, value, onChange }) {
   // State to track whether the dropdown is open or not
   const [isOpen, setIsOpen] = useState(false);
+  const divEl = useRef();
+
+  // Handle outside click event
+  useEffect(() => {
+    const handler = (event) => {
+      // Outside of current div element
+      if (!divEl.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handler, true);
+
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, []);
 
   // Toggle the dropdown open/closed
   const handleClick = () => {
@@ -36,7 +53,7 @@ function Dropdown({ options, value, onChange }) {
   const renderedValue = value?.label || "Select...";
 
   return (
-    <div className="w-48 relative">
+    <div ref={divEl} className="w-48 relative">
       {/* Panel component as the main dropdown button */}
       <Panel
         className="flex justify-between items-center cursor-pointer"

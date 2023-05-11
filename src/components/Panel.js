@@ -6,7 +6,7 @@ const Panel = ({ children, className, ...rest }) => {
     className
   );
   return (
-    <div className={finalClassNames} {...rest}>
+    <div {...rest} className={finalClassNames}>
       {children}
     </div>
   );

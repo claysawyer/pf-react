@@ -2,6 +2,8 @@
 
 ## Components and technologies used -
 
+## custom navigation implementation
+
 <details>
   <summary>Dropdown component: by incorporating these React hooks, technologies, and concepts, the component achieves dynamic behavior, manages state, adds event listeners, handles outside click events, and styles the dropdown using Tailwind CSS classes.</summary>
 

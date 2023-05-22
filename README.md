@@ -1,7 +1,5 @@
 # pf-react: a mini react portfolio showcase using Tailwind CSS
 
-## Components and technologies used -
-
 ### Dropdown Component
 
 - **React Hooks**:
@@ -60,3 +58,27 @@
 - **CSS styling**: Used to define the visual appearance of the accordion component, applying specific classes for colors, padding, borders, and cursor styles. Offers consistent and visually appealing styles to the component. Simplifies styling by utilizing pre-defined classes from a CSS framework.
 
 - **CSS framework (Tailwind CSS)**: Used to provide pre-defined styles and utility classes for quick and consistent styling of the accordion component. Speeds up development by eliminating the need to write custom CSS. Offers a wide range of utility classes for responsive and customizable styling options.
+
+### Button Component
+
+- **React Icons (`GoBell`, `GoCloudDownload`, `GoDatabase`)**: Used to display different icons in the buttons. Provides a wide range of pre-built icons, reducing the need for custom icon creation. Ensures consistent and visually appealing icons.
+
+- **Button component**: Custom component used to create buttons with different variations. Promotes code reusability and consistency across the application.
+
+- **CSS framework (Tailwind CSS)**: Utilized to apply pre-defined styles and utility classes to the buttons. Facilitates rapid and consistent styling of the components. Offers a wide range of utility classes for responsive and customizable styling options.
+
+- **Conditional rendering**: Used to conditionally render certain elements based on specific props. Enables the dynamic display of different button variations with corresponding icons and text.
+
+- **Event handling (`onClick`, `onMouseEnter`, `onMouseLeave`)**: Utilized to define the behavior of buttons when clicked or interacted with. Enables interactivity and user engagement by providing appropriate response to user actions.
+
+- **CSS styling**: Applied to customize the appearance of the buttons using Tailwind CSS utility classes. Provides consistent and visually appealing styles to the buttons.
+
+- **Classname library (`className`)**: Used to conditionally apply multiple CSS classes based on different button variations. Simplifies the process of composing class names dynamically.
+
+- **Props destructuring (`{ children, primary, secondary, success, warning, danger, outline, rounded, ...rest }`)**: Enables the extraction of specific props from the component's props object, allowing easy access to the desired prop values. Improves code readability and reduces the need for repetitive props accessing.
+
+- **Rest parameters (`...rest`)**: Used to capture any remaining props that are not explicitly destructured, allowing the forwarding of any additional props to the underlying button element. Enhances extensibility by enabling the passing of arbitrary props to the button component.
+
+- **PropTypes validation**: Utilized to enforce prop type validation for the button component. Helps catch potential bugs or issues during development by ensuring the correct usage of props. Provides clearer documentation for component consumers.
+
+- **Error handling for prop validation**: Implemented custom prop validation logic to prevent multiple conflicting variations from being active simultaneously. Helps maintain consistency and prevents incorrect usage of button variations.

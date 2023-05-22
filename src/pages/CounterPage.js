@@ -7,6 +7,7 @@ const INCREMENT_COUNT = "increment";
 const SET_VALUE_TO_ADD = "change_value_to_add";
 const DECREMENT_COUNT = "decrement";
 const ADD_VALUE_TO_COUNT = "add_value_to_count";
+const RESET_COUNT = "reset";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -22,6 +23,9 @@ const reducer = (state, action) => {
       return;
     case SET_VALUE_TO_ADD:
       state.valueToAdd = action.payload;
+      return;
+    case RESET_COUNT:
+      state.count = 0;
       return;
     default:
       return;
@@ -44,6 +48,13 @@ function CounterPage({ initialCount }) {
       type: DECREMENT_COUNT,
     });
   };
+
+  const resetCount = () => {
+    dispatch({
+      type: RESET_COUNT,
+    });
+  };
+
   const handleChange = (event) => {
     const value = parseInt(event.target.value) || 0;
 
@@ -66,6 +77,7 @@ function CounterPage({ initialCount }) {
       <div className="flex flex-row">
         <Button onClick={increment}>Increment</Button>
         <Button onClick={decrement}>Decrement</Button>
+        <Button onClick={resetCount}>Reset</Button>
       </div>
 
       <form onSubmit={handleSubmit}>

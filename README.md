@@ -1,4 +1,4 @@
-# pf-react: a react portfolio showcase using Tailwind
+# pf-react: a mini react portfolio showcase using Tailwind CSS
 
 ## Components and technologies used -
 
@@ -8,6 +8,7 @@
   <summary>Dropdown component: by incorporating these React hooks, technologies, and concepts, the component achieves dynamic behavior, manages state, adds event listeners, handles outside click events, and styles the dropdown using Tailwind CSS classes.</summary>
 
 1. **React Hooks**:
+
    - `useState`: Used to manage state within the functional component (`isOpen`).
    - `useEffect`: Used to handle side effects and perform actions on component mount and unmount (adding and removing event listeners).
    - `useRef`: Used to create a reference to an element (`divEl`) and access it across renders.
@@ -31,3 +32,23 @@
 10. **Outside Click Handling**: The `useEffect` hook is used to add an event listener to the document to handle clicks outside the dropdown component (`divEl`). This concept is used to close the dropdown when clicking outside of it.
 
 </details>
+
+<details>
+  <summary>Table component: by incorporating these React hooks, technologies, and concepts, the component achieves dynamic behavior, manages state, adds event listeners, handles outside click events, and styles the dropdown using Tailwind CSS classes.</summary>
+
+- React: The components are written using React, a JavaScript library for building user interfaces.
+- JSX: The components utilize JSX syntax, which allows mixing HTML-like code within JavaScript.
+- Functional Components: The components are written as functional components using the function syntax.
+- Props: The components receive data and configurations through props.
+- Fragment: The `Fragment` component from React is imported and used to wrap multiple elements without adding an extra DOM element.
+- Array.map(): The `map` method is used to iterate over arrays and transform data into JSX elements.
+- CSS: The components apply CSS classes to style the table and its elements.
+- Component Composition: The components are composed together to create the final `Table` component.
+- Key Prop: Each rendered element in an iteration is assigned a unique `key` prop to help React efficiently update the component.
+- Table Structure: The `table`, `thead`, `tbody`, `tr`, `th`, and `td` elements are used to structure and display the table.
+- Conditional Rendering: The `renderedHeaders` array checks if a `header` function is provided for each column and renders it accordingly.
+- Dynamic Rendering: The `config` array is used to dynamically render the table headers and cells based on the configuration provided.
+- className: The `className` prop is used to apply CSS classes to elements.
+- keyFn: The `keyFn` function is passed as a prop to generate unique keys for each row of data.
+
+  </details>

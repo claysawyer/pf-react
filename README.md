@@ -22,49 +22,6 @@
 - **Exporting multiple values**: The `NavigationContext` and `NavigationProvider` components are exported using named exports. Allows other modules to import these components separately.
 - **Importing named exports**: The `NavigationContext` is imported using the default import syntax, and the `NavigationProvider` is imported using named imports. Enables importing specific exports from a module.
 
-### Dropdown Component
-
-- **React Hooks**:
-  - `useState`: Used to manage state within the functional component (`isOpen`).
-  - `useEffect`: Used to handle side effects and perform actions on component mount and unmount (adding and removing event listeners).
-  - `useRef`: Used to create a reference to an element (`divEl`) and access it across renders.
-- **React Icons**: The component imports the `GoChevronDown` icon from the `react-icons/go` package and uses it as an icon within the dropdown.
-- **Component Composition**: The component utilizes the `Panel` component imported from "./Panel" to compose the main dropdown button and the dropdown options panel.
-- **Event Handling**: The component defines event handler functions (`handleClick` and `handleOptionClick`) to handle click events on the dropdown and its options.
-- **JSX Markup**: The component uses JSX syntax to define the component's structure and render the HTML-like markup.
-- **Conditional Rendering**: The component conditionally renders the options panel based on the `isOpen` state variable.
-- **CSS Styling**: The component uses inline CSS and applies Tailwind CSS class names (`hover:bg-sky-100`, `rounded`, `cursor-pointer`, `p-1`, etc.) to style the various elements.
-- **Tailwind CSS**: The component applies Tailwind CSS utility classes for easy and rapid styling of components.
-- **HTML and JavaScript**: The component is embedded within an HTML file and utilizes JavaScript to add interactivity and behavior to the component.
-- **Outside Click Handling**: The `useEffect` hook is used to add an event listener to the document to handle clicks outside the dropdown component (`divEl`). This concept is used to close the dropdown when clicking outside of it.
-
-### Table Component
-
-- **Functional Components**: The components are written as functional components using the function syntax.
-- **Props**: The components receive data and configurations through props.
-- **Fragment**: The `Fragment` component from React is imported and used to wrap multiple elements without adding an extra DOM element.
-- **Array.map()**: The `map` method is used to iterate over arrays and transform data into JSX elements.
-- **CSS styling (using class names and inline styles)**: Used to define the visual appearance of the components by applying specific class names and inline styles.
-- **CSS framework (Tailwind CSS)**: Tailwind CSS was used as a CSS framework to provide pre-defined styles and utility classes, enabling quick and consistent styling of the modal and its components.
-- **Component Composition**: The components are composed together to create the final `Table` component.
-- **Key Prop**: Each rendered element in an iteration is assigned a unique `key` prop to help React efficiently update the component.
-- **Table Structure**: The `table`, `thead`, `tbody`, `tr`, `th`, and `td` elements are used to structure and display the table.
-- **Conditional Rendering**: The `renderedHeaders` array checks if a `header` function is provided for each column and renders it accordingly.
-- **Dynamic Rendering**: The `config` array is used to dynamically render the table headers and cells based on the configuration provided.
-- **className**: The `className` prop is used to apply CSS classes to elements.
-- **keyFn**: The `keyFn` function is passed as a prop to generate unique keys for each row of data.
-
-### Modal Component
-
-- **React Hooks (useState, useEffect)**: Used to add state and side effects to functional components, managing the modal's visibility and applying CSS class to the document.body.
-- **React Portal (ReactDOM.createPortal)**: Used to create a portal for rendering the modal component outside the normal component hierarchy, using the .modal-container element as the target container.
-- **CSS styling (using class names and inline styles)**: Used to define the visual appearance of the components by applying specific class names and inline styles.
-- **CSS framework (Tailwind CSS)**: Tailwind CSS was used as a CSS framework to provide pre-defined styles and utility classes, enabling quick and consistent styling of the modal and its components.
-- **Event handling (onClick event)**: Used to trigger actions like opening or closing the modal when buttons or elements are clicked.
-- **Conditional rendering ({showModal && modal})**: Used to conditionally render the modal component based on the value of the showModal state variable.
-- **State management**: Used to track and manage the showModal state variable to control the visibility of the modal.
-- **Component composition and nesting**: Used to compose the modal component by combining smaller components like buttons and paragraphs.
-
 ### Accordion Component
 
 - **React Hooks (`useState`)**: Used to add state to functional components, allowing the tracking of the expanded index state in the accordion. Simplifies state management and allows functional components to have local state without needing a class component. Provides a straightforward and declarative way to handle component state.
@@ -109,3 +66,46 @@
 - **Component composition**: Components (`Button`, `Panel`) are composed to build the CounterPage component. Encourages code reuse and modularity by combining smaller, reusable components.
 - **Inline styling**: Applied to customize the appearance of the input field using Tailwind CSS utility classes. Provides a quick and efficient way to style the component without external CSS files.
 - **Prop passing**: Props are passed between components (`Button`, `Panel`) to customize their behavior and appearance. Allows for flexible customization and reusability of components.
+
+### Dropdown Component
+
+- **React Hooks**:
+  - `useState`: Used to manage state within the functional component (`isOpen`).
+  - `useEffect`: Used to handle side effects and perform actions on component mount and unmount (adding and removing event listeners).
+  - `useRef`: Used to create a reference to an element (`divEl`) and access it across renders.
+- **React Icons**: The component imports the `GoChevronDown` icon from the `react-icons/go` package and uses it as an icon within the dropdown.
+- **Component Composition**: The component utilizes the `Panel` component imported from "./Panel" to compose the main dropdown button and the dropdown options panel.
+- **Event Handling**: The component defines event handler functions (`handleClick` and `handleOptionClick`) to handle click events on the dropdown and its options.
+- **JSX Markup**: The component uses JSX syntax to define the component's structure and render the HTML-like markup.
+- **Conditional Rendering**: The component conditionally renders the options panel based on the `isOpen` state variable.
+- **CSS Styling**: The component uses inline CSS and applies Tailwind CSS class names (`hover:bg-sky-100`, `rounded`, `cursor-pointer`, `p-1`, etc.) to style the various elements.
+- **Tailwind CSS**: The component applies Tailwind CSS utility classes for easy and rapid styling of components.
+- **HTML and JavaScript**: The component is embedded within an HTML file and utilizes JavaScript to add interactivity and behavior to the component.
+- **Outside Click Handling**: The `useEffect` hook is used to add an event listener to the document to handle clicks outside the dropdown component (`divEl`). This concept is used to close the dropdown when clicking outside of it.
+
+### Table Component
+
+- **Functional Components**: The components are written as functional components using the function syntax.
+- **Props**: The components receive data and configurations through props.
+- **Fragment**: The `Fragment` component from React is imported and used to wrap multiple elements without adding an extra DOM element.
+- **Array.map()**: The `map` method is used to iterate over arrays and transform data into JSX elements.
+- **CSS styling (using class names and inline styles)**: Used to define the visual appearance of the components by applying specific class names and inline styles.
+- **CSS framework (Tailwind CSS)**: Tailwind CSS was used as a CSS framework to provide pre-defined styles and utility classes, enabling quick and consistent styling of the modal and its components.
+- **Component Composition**: The components are composed together to create the final `Table` component.
+- **Key Prop**: Each rendered element in an iteration is assigned a unique `key` prop to help React efficiently update the component.
+- **Table Structure**: The `table`, `thead`, `tbody`, `tr`, `th`, and `td` elements are used to structure and display the table.
+- **Conditional Rendering**: The `renderedHeaders` array checks if a `header` function is provided for each column and renders it accordingly.
+- **Dynamic Rendering**: The `config` array is used to dynamically render the table headers and cells based on the configuration provided.
+- **className**: The `className` prop is used to apply CSS classes to elements.
+- **keyFn**: The `keyFn` function is passed as a prop to generate unique keys for each row of data.
+
+### Modal Component
+
+- **React Hooks (useState, useEffect)**: Used to add state and side effects to functional components, managing the modal's visibility and applying CSS class to the document.body.
+- **React Portal (ReactDOM.createPortal)**: Used to create a portal for rendering the modal component outside the normal component hierarchy, using the .modal-container element as the target container.
+- **CSS styling (using class names and inline styles)**: Used to define the visual appearance of the components by applying specific class names and inline styles.
+- **CSS framework (Tailwind CSS)**: Tailwind CSS was used as a CSS framework to provide pre-defined styles and utility classes, enabling quick and consistent styling of the modal and its components.
+- **Event handling (onClick event)**: Used to trigger actions like opening or closing the modal when buttons or elements are clicked.
+- **Conditional rendering ({showModal && modal})**: Used to conditionally render the modal component based on the value of the showModal state variable.
+- **State management**: Used to track and manage the showModal state variable to control the visibility of the modal.
+- **Component composition and nesting**: Used to compose the modal component by combining smaller components like buttons and paragraphs.

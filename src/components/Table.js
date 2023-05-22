@@ -7,7 +7,6 @@ function Table({ data, config, keyFn }) {
     } else {
       return <th key={column.label}>{column.label}</th>;
     }
-    
   });
 
   const renderedRows = data.map((rowData) => {

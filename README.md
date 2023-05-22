@@ -4,19 +4,20 @@
 
 ### Dropdown component:
 
-- **React Hooks**:
+**React Hooks**:
+
 - `useState`: Used to manage state within the functional component (`isOpen`).
 - `useEffect`: Used to handle side effects and perform actions on component mount and unmount (adding and removing event listeners).
 - `useRef`: Used to create a reference to an element (`divEl`) and access it across renders.
-- **React Icons**: The component imports the `GoChevronDown` icon from the `react-icons/go` package and uses it as an icon within the dropdown.
-- **Component Composition**: The component utilizes the `Panel` component imported from "./Panel" to compose the main dropdown button and the dropdown options panel.
-- **Event Handling**: The component defines event handler functions (`handleClick` and `handleOptionClick`) to handle click events on the dropdown and its options.
-- **JSX Markup**: The component uses JSX syntax to define the component's structure and render the HTML-like markup.
-- **Conditional Rendering**: The component conditionally renders the options panel based on the `isOpen` state variable.
-- **CSS Styling**: The component uses inline CSS and applies Tailwind CSS class names (`hover:bg-sky-100`, `rounded`, `cursor-pointer`, `p-1`, etc.) to style the various elements.
-- **Tailwind CSS**: The component applies Tailwind CSS utility classes for easy and rapid styling of components.
-- **HTML and JavaScript**: The component is embedded within an HTML file and utilizes JavaScript to add interactivity and behavior to the component.
-- **Outside Click Handling**: The `useEffect` hook is used to add an event listener to the document to handle clicks outside the dropdown component (`divEl`). This concept is used to close the dropdown when clicking outside of it.
+  **React Icons**: The component imports the `GoChevronDown` icon from the `react-icons/go` package and uses it as an icon within the dropdown.
+  **Component Composition**: The component utilizes the `Panel` component imported from "./Panel" to compose the main dropdown button and the dropdown options panel.
+  **Event Handling**: The component defines event handler functions (`handleClick` and `handleOptionClick`) to handle click events on the dropdown and its options.
+  **JSX Markup**: The component uses JSX syntax to define the component's structure and render the HTML-like markup.
+  **Conditional Rendering**: The component conditionally renders the options panel based on the `isOpen` state variable.
+  **CSS Styling**: The component uses inline CSS and applies Tailwind CSS class names (`hover:bg-sky-100`, `rounded`, `cursor-pointer`, `p-1`, etc.) to style the various elements.
+  **Tailwind CSS**: The component applies Tailwind CSS utility classes for easy and rapid styling of components.
+  **HTML and JavaScript**: The component is embedded within an HTML file and utilizes JavaScript to add interactivity and behavior to the component.
+  **Outside Click Handling**: The `useEffect` hook is used to add an event listener to the document to handle clicks outside the dropdown component (`divEl`). This concept is used to close the dropdown when clicking outside of it.
 
 ### Table Component
 

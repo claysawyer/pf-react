@@ -1,5 +1,7 @@
 # pf-react: a mini react portfolio showcase using Tailwind CSS
 
+This is a small project that demonstrates manual implementation of basic web elements in React. It uses `createContext` to create a `NavigationProvider` to implement routes, implements a sortable table, working modal, and a few others. Below are the techniques or techonologies used for each component or function.
+
 ### Navigation
 
 - **React**: Used as the JavaScript library for building the user interface and handling the component-based structure.
